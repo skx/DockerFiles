@@ -1,9 +1,9 @@
 #
 # Build it:
-#     sudo docker build -t skxskx/beanstalkd - < Dockerfile
+#     sudo docker build -t skxskx/beanstalkd .
 #
 # Then launch it:
-#     sudo docker run   -d -p 11300:11300 skxskx/beanstalkd
+#     sudo docker run -d -p 11300:11300 skxskx/beanstalkd
 #
 
 FROM ubuntu

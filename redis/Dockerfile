@@ -5,6 +5,8 @@
 # Then launch it:
 #     sudo docker run -d -p 11211:11211 skxskx/redis
 #
+# NOTE: There is no local-storage setup.
+#
 
 FROM ubuntu
 MAINTAINER steve@steve.org.uk
