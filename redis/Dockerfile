@@ -3,7 +3,7 @@
 #     sudo docker build -t skxskx/redis .
 #
 # Then launch it:
-#     sudo docker run -d -p 11211:11211 skxskx/redis
+#     sudo docker run -d -p 6379:6379 skxskx/redis
 #
 # NOTE: There is no local-storage setup.
 #
