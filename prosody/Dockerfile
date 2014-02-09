@@ -45,6 +45,7 @@ RUN ln -s /etc/prosody/certs/localhost.cert /etc/prosody/certs/example.com.crt
 #
 RUN echo "VirtualHost \"chat.example.com\"" > /etc/prosody/conf.d/example.cfg.lua
 RUN echo Component \"rooms.chat.example.com\" \"muc\" >> /etc/prosody/conf.d/example.cfg.lua
+RUN echo "restrict_room_creation = false" >> /etc/prosody/conf.d/example.cfg.lua
 
 #
 # Make a PIDfile directory
