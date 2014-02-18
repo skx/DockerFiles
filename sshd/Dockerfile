@@ -43,6 +43,11 @@ RUN apt-get install runit --yes --force-yes
 RUN apt-get install openssh-server openssh-client --yes --force-yes
 
 #
+# Configure a locale
+#
+RUN locale-gen en_US en_US.UTF-8
+
+#
 # Setup a root password; simple enough to remember, but hard enough that
 # it won't be cracked immediately.  (ha!)
 #
