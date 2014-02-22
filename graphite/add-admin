@@ -1,0 +1,23 @@
+#!/usr/bin/env expect
+
+set timeout -1
+spawn python /var/lib/graphite/webapp/graphite/manage.py createsuperuser
+
+
+expect "Username *:" {
+  send "root\r"
+}
+
+expect "E-mail address:" {
+  send "root.graphite@mailinator.com\r"
+}
+
+expect "Password:" {
+  send "root\r"
+}
+
+expect "Password *:" {
+  send "root\r"
+}
+
+expect "Superuser created successfully"

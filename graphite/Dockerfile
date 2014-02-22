@@ -79,6 +79,15 @@ run	chmod 0664 /var/lib/graphite/storage/graphite.db
 run	cd /var/lib/graphite/webapp/graphite && python manage.py syncdb --noinput
 
 #
+#  Create a login user.
+#
+run apt-get -y install expect
+ADD add-admin /tmp/add-admin
+RUN chmod 775 /tmp/add-admin
+RUN /tmp/add-admin
+
+
+#
 # Expose Nginx
 #
 expose	:80
