@@ -17,6 +17,9 @@
 
 FROM ubuntu
 MAINTAINER steve@steve.org.uk
+
+RUN echo 22-02-2014
+
 RUN apt-get update
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-client mysql-server apache2 libapache2-mod-php5 pwgen python-setuptools vim-tiny php5-mysql openssh-server sudo php5-ldap
@@ -26,8 +29,9 @@ ADD ./foreground.sh /etc/apache2/foreground.sh
 ADD ./supervisord.conf /etc/supervisord.conf
 RUN echo %sudo	ALL=NOPASSWD: ALL >> /etc/sudoers
 RUN rm -rf /var/www/
+RUN mkdir /var/www/
 ADD http://wordpress.org/latest.tar.gz /wordpress.tar.gz
-RUN tar xvf /wordpress.tar.gz
+RUN tar xf /wordpress.tar.gz
 RUN mv /wordpress /var/www/
 RUN chown -R www-data:www-data /var/www/
 RUN chmod 755 /start.sh
