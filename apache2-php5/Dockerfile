@@ -6,10 +6,10 @@
 #     id=$(docker run -d -p 80 skxskx/apache2)
 #
 # By default Apache2 will serve content from beneath /var/www so you
-# should map that to a persistent location if you wish:
+# should map that to a persistent location such that you can actually
+# serve content:
 #
-#
-#     docker run -d -p 80 -v ~/htdocs:/var/www skxskx/apache2
+#     docker run -d -p 80:80 -v ~/htdocs:/var/www skxskx/apache2
 #
 # Steve
 # --
@@ -18,7 +18,10 @@
 FROM ubuntu
 MAINTAINER steve@steve.org.uk
 
-RUN echo 25-02-2014
+#
+# Update this to trigger a rebuild.
+#
+RUN echo 11-03-2014
 
 RUN apt-get update
 
