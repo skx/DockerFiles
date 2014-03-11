@@ -13,8 +13,9 @@ MAINTAINER steve@steve.org.uk
 ENV DEBIAN_FRONTEND noninteractive
 
 #
-# ensure our sources are up-to-date
+# Update this to force a cache refresh.
 #
+RUN echo 11-03-2014
 RUN apt-get update
 
 #
