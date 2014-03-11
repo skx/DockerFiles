@@ -12,6 +12,8 @@ Each image in this repository has been tested with Docker version 0.9.0, build 2
     * The in-memory work-queue.
 * memcached
     * The in-memory cache.
+* prosody
+    * The XMPP chat-server.
 * redis
     * The in-memory database.
 
