@@ -16,7 +16,15 @@ Each image in this repository has been tested with Docker version 0.9.0, build 2
     * The XMPP chat-server.
 * redis
     * The in-memory database.
+* sshd
+    * An openssh server.
 
+
+TODO:
+
+* squeezebox
+* wordpress
+* graphite
 
 
 Notes
