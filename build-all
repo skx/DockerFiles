@@ -1,5 +1,11 @@
 #!/bin/sh
 
+
+#
+#  Apache + PHP
+#
+docker build -t skxskx/apache2-php5 apache2-php5/
+
 #
 #  Beanstalkd
 #
