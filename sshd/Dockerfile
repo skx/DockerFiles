@@ -75,6 +75,12 @@ RUN /bin/echo -e 'exec /usr/sbin/sshd -D' >> /etc/service/sshd/run
 RUN chown root.root /etc/service/sshd/run
 RUN chmod 755 /etc/service/sshd/run
 
+#
+#  Allow root login over ssh, without a key.
+#
+RUN sed -i "/PermitRootLogin/d" /etc/ssh/sshd_config
+RUN sed -i "/UsePAM/d" /etc/ssh/sshd_config
+RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 #
 # Finally launch runit.
