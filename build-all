@@ -3,14 +3,19 @@
 #
 #  Beanstalkd
 #
-./docker build -t skxskx/beanstalkd beanstalkd/
+docker build -t skxskx/beanstalkd beanstalkd/
+
+#
+#  Memcached
+#
+docker build -t skxskx/memcached  memcached/
 
 #
 #  Redis
 #
-./docker build -t skxskx/redis redis/
+docker build -t skxskx/redis redis/
 
 #
 #  sshd
 #
-./docker build -t skxskx/sshd sshd/
+docker build -t skxskx/sshd sshd/
