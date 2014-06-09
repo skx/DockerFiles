@@ -3,13 +3,15 @@ Dockerfile Collection
 
 A small collection of `Dockerfile`s, used to build docker images.
 
-Each image in this repository has been tested with Docker version 0.9.0, build 2b3fdf2.
+Each image in this repository has been tested with Docker version 1.0.0, build 63fe64c
 
 
 * apache2-php5
     * An image which launches a webserver.
 * beanstalkd
     * The in-memory work-queue.
+* graphite
+    * A graphing/storage/stats system.
 * memcached
     * The in-memory cache.
 * prosody
@@ -18,13 +20,14 @@ Each image in this repository has been tested with Docker version 0.9.0, build 2
     * The in-memory database.
 * sshd
     * An openssh server.
-
+* wordpress
+    * A popular blogging engine.
 
 TODO:
 
 * squeezebox
-* wordpress
-* graphite
+
+
 
 
 Notes
