@@ -21,8 +21,7 @@ MAINTAINER steve@steve.org.uk
 #
 # Update this to trigger a rebuild.
 #
-RUN echo 11-03-2014
-
+RUN echo 09-05-2014
 RUN apt-get update
 
 #
@@ -39,7 +38,7 @@ RUN apt-get install runit --yes --force-yes
 #
 #  Add a test-file.
 #
-ADD index.php /var/www/index.php
+ADD index.php /var/www/html/index.php
 
 
 #
@@ -51,7 +50,7 @@ EXPOSE 80
 #
 #  Expose the root directory.
 #
-VOLUME [ "/var/www" ]
+VOLUME [ "/var/www/html" ]
 
 
 #
