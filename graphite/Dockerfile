@@ -38,6 +38,7 @@ ENV DEBIAN_FRONTEND noninteractive
 #
 #  Ensure we're current
 #
+run echo 09-05-2014
 run	echo 'deb http://us.archive.ubuntu.com/ubuntu/ precise universe' >> /etc/apt/sources.list
 run	apt-get -y update
 
