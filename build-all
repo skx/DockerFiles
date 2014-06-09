@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#
+#  Beanstalkd
+#
+./docker build -t skxskx/beanstalkd beanstalkd/
+
+#
+#  Redis
+#
+./docker build -t skxskx/redis redis/
+
+#
+#  sshd
+#
+./docker build -t skxskx/sshd sshd/
