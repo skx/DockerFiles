@@ -22,7 +22,7 @@ endif
 build-all:
 	for i in */Dockerfile ; do \
 		nm=$$(dirname $$i) ;\
-		${DOCKER}  -t ${PREFIX}/$$nm $$nm/ ;\
+		${DOCKER} build -t ${PREFIX}/$$nm $$nm/ ;\
 	done
 
 
