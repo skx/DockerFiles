@@ -35,6 +35,17 @@ clean-all:
 	${DOCKER} rmi `${DOCKER} images -q`           || true
 
 
+
+#
+# Push all images
+#
+push-all:
+	for i in */Dockerfile ; do \
+		nm=$$(dirname $$i) ;\
+		${DOCKER} push ${PREFIX}/$$nm ;\
+	done
+
+
 #
 # Show the version of docker.
 #
