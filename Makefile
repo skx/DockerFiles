@@ -26,12 +26,14 @@ build-all:
 	done
 
 
+
 #
 # Clean all images.  Every single image.
 #
 clean-all:
-	${DOCKER} rm `${DOCKER} ps --no-trunc -a -q`
-	${DOCKER} docker rmi $(${DOCKER} images -q)
+	${DOCKER} rm  `${DOCKER} ps --no-trunc -a -q` || true
+	${DOCKER} rmi `${DOCKER} images -q`           || true
+
 
 #
 # Show the version of docker.
