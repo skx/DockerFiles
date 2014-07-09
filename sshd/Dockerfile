@@ -30,7 +30,7 @@ MAINTAINER steve@steve.org.uk
 #
 # Update apt
 #
-RUN echo 09-05-2014
+RUN echo 09-07-2014
 RUN apt-get update -q -q
 
 #
