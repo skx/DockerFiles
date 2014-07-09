@@ -42,7 +42,7 @@ clean-all:
 push-all:
 	for i in */Dockerfile ; do \
 		nm=$$(dirname $$i) ;\
-		if ( ! echo $nm | grep local >/dev/null 2>/dev/null ) ; then \
+		if ( ! echo $$nm | grep \.local >/dev/null 2>/dev/null ) ; then \
 			${DOCKER} push ${PREFIX}/$$nm ;\
 		fi ; \
 	done
